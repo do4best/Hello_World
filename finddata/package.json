@@ -9,6 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
-  
+  "type": "module",
+  "dependencies": {
+    "log-ok": "^0.1.1"
+  }
 }
