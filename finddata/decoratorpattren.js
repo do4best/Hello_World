@@ -1,9 +1,10 @@
+/// decorator pattrens
 class Form{
-    constructor(color){
-        this.color = color
+    constructor(color){// this is constructor
+        this.color = color // it show only color
     }
 }
-class Circle extends Form{
+class Circle extends Form{// class Circle
     constructor(radius = 0) {
         super();
         this.radius = radius;
