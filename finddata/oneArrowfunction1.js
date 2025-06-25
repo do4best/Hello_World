@@ -21,6 +21,15 @@ const returnDay = (day) => {
     const dayofWeek = [ "Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     return dayofWeek[day.getDay()]
 }
+const randomArray = (length) => Array.from({ length }, () => Math.floor(Math.random() * 100)) // random Array
+const gcd = (num1, num2) => {
+    while (num2 !== 0) {
+        let tem = num2;
+        num2 = num1 % num2;
+        num1 = tem
+    }
+    return num1
+}
 const movies = ['speed','night is hunted','beatle']
 const findIndex=(arr,value)=>arr.indexOf(value)
 const findLeapYear=(year)=>(year%4 === 0 && year % 100 !== 0) || (year%400 === 0)
@@ -28,7 +37,11 @@ const arraytoscv=(arr)=>arr.join(',')
 const reduceArray=(arr)=>arr.reduce((first,last)=>first+last,0)/arr.length
 const findRandom = (first, last) => Math.floor(Math.random() * last) + first;
 const arrayReverse = (arr) => arr.slice().reverse();
-const intersectionArray=(arr1,arr2)=>arr1.filter(val=>!arr2.includes(val))
+const intersectionArray = (arr1, arr2) => arr1.filter(val => !arr2.includes(val))
+const findLongest = (str) => str.split(' ').reduce((longest, word) => word.length > longest.length ? word : longest, "")
+const countOccurence = (str, char) => {
+    return `${char} is repeated this ${str.split(char).length - 1} times`
+}
 console.log(fabonacci(10))
 console.log(raisedPower(2, 6))
 console.log(countWords("This is realy strang"))
@@ -41,4 +54,8 @@ console.log(findIndex(movies, 'beatle'))
 console.log(remainingMinute(700))
 console.log(removeElement(movies, 'speed '))
 console.log(returnDay(new Date("6/28/2025")))
-console.log(intersectionArray([1,2,3,4,5,6],[1,2,8,9]))
+console.log(intersectionArray([1, 2, 3, 4, 5, 6], [1, 2, 8, 9]))
+console.log(randomArray(10))
+console.log(gcd(60, 21))
+console.log(findLongest("Hellois there, how are you"))
+console.log(countOccurence("There is my friend who didnt listent any one",'m'))
