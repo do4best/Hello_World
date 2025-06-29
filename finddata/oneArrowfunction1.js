@@ -42,6 +42,15 @@ const findLongest = (str) => str.split(' ').reduce((longest, word) => word.lengt
 const countOccurence = (str, char) => {
     return `${char} is repeated this ${str.split(char).length - 1} times`
 }
+const minMax = (arr) => ({
+    min: Math.min(...arr),
+    max: Math.max(...arr)
+})
+const reverseString = (str) => str.split('').reverse().join('')
+const shuffleString=(str)=>str.split('').sort(()=>0.5-Math.random()).join('')
+let arr=[1,2,3,4,5]
+const descentArray = (arr) => arr.every((el, i) => i === 0 || el <= arr[i - 1])
+const getAschiCharater=(char)=>char.charCodeAt(0)
 console.log(fabonacci(10))
 console.log(raisedPower(2, 6))
 console.log(countWords("This is realy strang"))
@@ -58,4 +67,9 @@ console.log(intersectionArray([1, 2, 3, 4, 5, 6], [1, 2, 8, 9]))
 console.log(randomArray(10))
 console.log(gcd(60, 21))
 console.log(findLongest("Hellois there, how are you"))
-console.log(countOccurence("There is my friend who didnt listent any one",'m'))
+console.log(countOccurence("There is my friend who didnt listent any one", 'm'))
+console.log(descentArray([5, 2, 1, 4, 3]))
+console.log(minMax(arr))
+console.log(reverseString("Find the God"))
+console.log(shuffleString("Hello There"))
+console.log(getAschiCharater('a'))
