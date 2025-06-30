@@ -25,3 +25,24 @@ const Car = {
 console.log(Car.name)
 Car.name = "Corolla"
 console.log(Car.name)
+function fun(a, b, c) {
+    return true;
+}
+console.log(fun.toString())
+function F() {
+    function C() {
+        return this;
+    }
+    C();
+}
+var oo = new F();
+console.log(oo)
+function A() {
+    this.a = 1;
+    return false;
+}
+console.log(typeof new A())
+const c = [1, 2, [1, 2]]
+c.sort()
+c.join('---')
+console.log(c)
