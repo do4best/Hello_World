@@ -46,6 +46,16 @@ const minMax = (arr) => ({
     min: Math.min(...arr),
     max: Math.max(...arr)
 })
+const factors = (fact) => {
+    let result = []
+    for(let i = 1; i <= fact; i++) {
+        if (fact % i === 0) {
+           result.push(i)
+       } 
+    }
+    return result
+}
+const consectiveNumber=(start,end)=>Array.from({length:end-start+1},(_,i)=>start+i)
 const reverseString = (str) => str.split('').reverse().join('')
 const shuffleString=(str)=>str.split('').sort(()=>0.5-Math.random()).join('')
 let arr=[1,2,3,4,5]
@@ -73,3 +83,5 @@ console.log(minMax(arr))
 console.log(reverseString("Find the God"))
 console.log(shuffleString("Hello There"))
 console.log(getAschiCharater('a'))
+console.log(factors(13))
+console.log(consectiveNumber(1,90))
