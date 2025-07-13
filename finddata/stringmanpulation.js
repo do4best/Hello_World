@@ -14,5 +14,5 @@ console.log(sentence.split(', '))
 let reg = /\d+/ // any digit
 console.log(reg.test("Hello 2"))
 // 2- find digits
-let reg1 = /^\d/; // only digits
+let reg1 = /^\d+$/; // only digits
 console.log(reg1.test("56"))
