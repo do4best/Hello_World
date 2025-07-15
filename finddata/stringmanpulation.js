@@ -16,3 +16,11 @@ console.log(reg.test("Hello 2"))
 // 2- find digits
 let reg1 = /^\d+$/; // only digits
 console.log(reg1.test("56"))
+let arr = [1, 2, 3, 4]
+let box = []
+for (let i in arr) {
+    box.push(arr[i])
+}
+console.log(box.join(' '))
+
+arr.forEach((index,value)=>console.log(arr[index]))
